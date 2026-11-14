@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CodeQuest | Programming Learning Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">&lt;/&gt; Code<span>Quest</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">&#9776;</label>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="missions">Missions</a>
+      <a href="leaderboard">Leaderboard</a>
+      <a href="register.jsp">Register</a>
+      <a class="nav-btn" href="login.jsp">Student Login</a>
+      <a class="nav-admin" href="admin-login.jsp">Admin Login</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">Game-based programming practice</p>
+    <h1>Solve code challenges. <span>Earn XP. Level up.</span></h1>
+    <p class="lead">CodeQuest turns Java, SQL and DSA practice into a game. Complete missions, climb from Beginner Coder to Code Legend and compete with other students on the global leaderboard.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="register.jsp">Start Your Quest</a>
+      <a class="btn btn-outline" href="login.jsp">Student Login</a>
+      <a class="btn btn-outline" href="leaderboard">View Leaderboard</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>How it works</h2>
+    <div class="feature-grid">
+      <div class="card"><div class="icon">&#128221;</div><h3>1. Register</h3><p class="muted">Create your player. You start at Level 1 with 0 XP.</p></div>
+      <div class="card"><div class="icon">&#127919;</div><h3>2. Take Missions</h3><p class="muted">Pick Java, SQL or DSA questions from Easy to Hard. One attempt each!</p></div>
+      <div class="card"><div class="icon">&#9889;</div><h3>3. Earn XP</h3><p class="muted">Correct answers award XP and push your progress bar toward the next level.</p></div>
+      <div class="card"><div class="icon">&#127942;</div><h3>4. Climb the Ranks</h3><p class="muted">Compare your score with every player on the global leaderboard.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Explore CodeQuest</h2>
+    <div class="feature-grid">
+      <a class="card action" href="register.jsp"><span class="action-icon">&#129489;&#8205;&#128187;</span><h3>Student Registration</h3><p class="muted">Create a new player account.</p></a>
+      <a class="card action" href="login.jsp"><span class="action-icon">&#128273;</span><h3>Student Login</h3><p class="muted">Continue your adventure.</p></a>
+      <a class="card action" href="admin-login.jsp"><span class="action-icon">&#128737;</span><h3>Admin Login</h3><p class="muted">Manage the question bank.</p></a>
+      <a class="card action" href="missions"><span class="action-icon">&#127918;</span><h3>Programming Missions</h3><p class="muted">Solve questions (login required).</p></a>
+      <a class="card action" href="leaderboard"><span class="action-icon">&#129351;</span><h3>Leaderboard</h3><p class="muted">See who rules the ranks.</p></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">&copy; CodeQuest &mdash; Learn. Solve. Level up.</footer>
+</body>
+</html>

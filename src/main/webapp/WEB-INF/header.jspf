@@ -1,0 +1,30 @@
+<%-- Shared navigation bar (static include). Defines: ctx, navStudent, navAdmin --%>
+<%
+    String ctx = request.getContextPath();
+    boolean navStudent = session.getAttribute("userId") != null;
+    boolean navAdmin = session.getAttribute("adminId") != null;
+%>
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="<%= ctx %>/index.html">&lt;/&gt; Code<span>Quest</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">&#9776;</label>
+    <nav class="nav-links">
+      <a href="<%= ctx %>/index.html">Home</a>
+      <a href="<%= ctx %>/missions">Missions</a>
+      <a href="<%= ctx %>/leaderboard">Leaderboard</a>
+      <% if (navStudent) { %>
+        <a href="<%= ctx %>/dashboard">Dashboard</a>
+        <a class="nav-btn" href="<%= ctx %>/logout">Logout (<%= DBConnection.esc((String) session.getAttribute("username")) %>)</a>
+      <% } else { %>
+        <a href="<%= ctx %>/register.jsp">Register</a>
+        <a class="nav-btn" href="<%= ctx %>/login.jsp">Login</a>
+      <% } %>
+      <% if (navAdmin) { %>
+        <a class="nav-admin" href="<%= ctx %>/admin-dashboard.jsp">Admin Panel</a>
+      <% } else { %>
+        <a class="nav-admin" href="<%= ctx %>/admin-login.jsp">Admin Login</a>
+      <% } %>
+    </nav>
+  </div>
+</header>

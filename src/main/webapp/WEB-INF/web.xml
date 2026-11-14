@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>CodeQuest</display-name>
+
+    <!-- ServletContext parameter: read with getServletContext().getInitParameter("appName") -->
+    <context-param>
+        <param-name>appName</param-name>
+        <param-value>CodeQuest</param-value>
+    </context-param>
+
+    <!-- AdminLoginServlet is declared here so it can receive ServletConfig init-params -->
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>firstphase.AdminLoginServlet</servlet-class>
+        <!-- ServletConfig parameters: read with getServletConfig().getInitParameter(...) -->
+        <init-param>
+            <param-name>adminSessionTimeoutMinutes</param-name>
+            <param-value>30</param-value>
+        </init-param>
+        <init-param>
+            <param-name>portalTitle</param-name>
+            <param-value>Admin Control Room</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/admin-login</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
